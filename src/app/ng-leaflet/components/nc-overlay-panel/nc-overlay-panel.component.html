@@ -1,0 +1,15 @@
+<div #op class="overlay-panel">
+    <!-- header -->
+    <div class="overlay-panel-header" *ngIf=titleEnabled>
+        <div class="overlay-panel-header-title">{{panelTitle}}</div>
+        <div class="overlay-panel-header-buttons">
+            <button class="overlay-panel-header-button-max" *ngIf="maxEnabled" id="overlay-header-button" (click)="maxResetHandle()">&#9635;</button>
+            <button class="overlay-panel-header-button-close" *ngIf="closeEnabled" id="overlay-header-close-button" (click)="closeHandle()">&#10005;</button>
+        </div>
+    </div>
+    <!-- content -->
+    <div class="overlay-panel-content">
+        <!-- 内容投影 -->
+        <ng-content></ng-content>
+    </div>
+</div>

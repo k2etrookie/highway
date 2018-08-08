@@ -1,0 +1,8 @@
+<div leaflet [leafletOptions]="mapOption" class="map-container">
+  <nz-slider class="shutter-slider" [nzVertical]="false" [(ngModel)]="shutterValue" [nzMin]="0" [nzMax]="100" [nzStep]="1"
+    [nzTipFormatter]="null" [nzDefaultValue]="50" (ngModelChange)="shutterChange()" (nzOnAfterChange)="afterShutter()">
+  </nz-slider>
+  <div class="project-content">
+    <ng-content></ng-content>
+  </div>
+</div>
